@@ -6,7 +6,7 @@ try:
     connection=mysql.connector.connect(user='root', password='201012', host='localhost', database='proj')
     cur= connection.cursor(buffered=True)
     print("ready2")
-except:
+except Exception:
     print("not working!")
 
 app = Flask(__name__, template_folder = 'Templates', static_folder='static')
